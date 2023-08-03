@@ -7,6 +7,7 @@ import { HousingLocation } from './housing-location';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'fairhouse';
 
   housingLocationsList: HousingLocation[] = [
@@ -39,4 +40,9 @@ export class AppComponent {
     }
   ];
 
+  selectedLocation: HousingLocation | undefined;
+
+  updateSelectedLocation(location: HousingLocation) {
+    this.selectedLocation = location;
+  }
 }
